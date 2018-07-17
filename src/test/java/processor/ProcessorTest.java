@@ -53,4 +53,11 @@ public class ProcessorTest {
         Integer actual = processor.processInstruction(previousValue, "multiply 5");
         assertThat(actual).isEqualTo(expected);
     }
+    @Test
+    public void processInstructionDivide() {
+        Integer previousValue = 10;
+        Integer expected = 5;
+        Integer actual = processor.processInstruction(previousValue, "divide 2");
+        assertThat(actual).isEqualTo(expected);
+    }
 }
